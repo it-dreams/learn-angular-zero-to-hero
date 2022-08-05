@@ -1,0 +1,94 @@
+{
+  "users": [
+    {
+      "id": "2",
+      "name": "Ravi Kumar",
+      "age": 23,
+      "gender": "male",
+      "email": "ravi@gmail.com",
+      "company": "Facebook",
+      "role": "Admin"
+    },
+    {
+      "id": "3",
+      "name": "Krishna",
+      "age": 31,
+      "gender": "male",
+      "email": "krishna@gmail.com",
+      "company": "TCS",
+      "role": "Admin"
+    },
+    {
+      "id": "4",
+      "name": "Rohan Kumar",
+      "age": 34,
+      "gender": "male",
+      "email": "rohan@tcs.com",
+      "company": "Wipro",
+      "role": "Developer"
+    },
+    {
+      "id": "5",
+      "name": "Raju",
+      "age": 30,
+      "gender": "male",
+      "email": "raju@google.com",
+      "company": "Google",
+      "role": "Analyst"
+    },
+    {
+      "id": "6",
+      "name": "Ram Singh",
+      "age": 30,
+      "gender": "male",
+      "email": "ram@gmail.com",
+      "company": "Amazon",
+      "role": "Admin"
+    },
+    {
+      "id": "7",
+      "name": "Ravi Kumar",
+      "age": 23,
+      "gender": "male",
+      "email": "ravi@gmail.com",
+      "company": "Facebook",
+      "role": "Admin"
+    },
+    {
+      "id": "8",
+      "name": "Krishna",
+      "age": 31,
+      "gender": "male",
+      "email": "krishna@gmail.com",
+      "company": "TCS",
+      "role": "Admin"
+    },
+    {
+      "id": "9",
+      "name": "Rohan Kumar",
+      "age": 34,
+      "gender": "male",
+      "email": "rohan@tcs.com",
+      "company": "Wipro",
+      "role": "Developer"
+    },
+    {
+      "id": "10",
+      "name": "Raju",
+      "age": 30,
+      "gender": "male",
+      "email": "raju@google.com",
+      "company": "Google",
+      "role": "Analyst"
+    },
+    {
+      "id": "11",
+      "name": "Ram Singh",
+      "age": 30,
+      "gender": "male",
+      "email": "ram@gmail.com",
+      "company": "Amazon",
+      "role": "Admin"
+    }
+  ]
+}

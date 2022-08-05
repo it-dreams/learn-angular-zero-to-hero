@@ -1,0 +1,48 @@
+<div class="card">
+  <div class="card-header">
+    {{ pageTitle }}
+  </div>
+  <div class="card-body">
+    <div fxLayoutAlign="space-between center" class="filter-section">
+        <div> 
+          Filter by:  
+          <input type="text" [(ngModel)]="userFilter" #divElementVar/>
+        </div>
+        <button type="button" class="btn btn-primary btn-sm" routerLink="/new-user" routerLinkActive="active">Add New</button>
+    </div>
+    <div class="table-responsive">
+      <table class="table" *ngIf="users && users.length">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Gender</th>
+            <th>Email</th>
+            <th>Company</th>
+            <th>Role</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of users | usersFilter: userFilter">
+            <td>{{ user.id }}</td>
+            <td>{{ user.name }}</td>
+            <td>{{ user.age }}</td>
+            <td>{{ user.gender }}</td>
+            <td>{{ user.email }}</td>
+            <td>{{ user.company }}</td>
+            <td>{{ user.role }}</td>
+            <td align="right">
+              <button type="button" class="btn btn-info btn-sm" (click)="editButton(user)">Edit</button>
+              <button type="button" class="btn btn-danger btn-sm"(click)="deleteButton(user.id)">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<div *ngIf="errorMessage" class="alert alert-danger">
+  Error: {{ errorMessage }}
+</div>

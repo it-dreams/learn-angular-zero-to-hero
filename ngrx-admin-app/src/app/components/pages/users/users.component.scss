@@ -1,0 +1,17 @@
+.filter-section {
+  padding: 0 15px 15px 15px;
+  font-size: 16px;
+  font-weight: 500;
+}
+.table-responsive {
+  height: 370px;
+  th {
+    background-color: rgba(0,0,0,.03);
+  }
+  td {
+    vertical-align: middle !important;
+    button {
+      margin: 0 5px;
+    }
+  }
+}

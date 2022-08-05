@@ -1,0 +1,12 @@
+input.ng-invalid.ng-touched{
+    border-color: red;
+}
+
+input:focus + #myDiv {    
+    display: none;
+    border-color: unset;
+}
+
+.hiddenItem {
+    display: none;
+}

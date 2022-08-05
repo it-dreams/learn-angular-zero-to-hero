@@ -1,0 +1,19 @@
+.sidebar {
+    width: 200px;
+    background-color: rgba(0,0,0,.03);
+    height: 100%;
+    color: #333;
+
+    .navigation-header {
+        padding: 22px;
+        font-size: 17px;
+        font-weight: 500;
+        background-color: #777;
+        color: #fff;
+        width: 100%;
+    }
+
+    mat-list-item {
+        cursor: pointer;
+    }
+}

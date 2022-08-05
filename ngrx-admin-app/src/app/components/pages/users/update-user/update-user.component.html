@@ -1,0 +1,116 @@
+<div class="card">
+    <div class="card-header">User Update Detail Form</div>
+    
+    <div class="card-body">
+      <form [formGroup]="userForm" (ngSubmit)="updateUser()">
+        <div class="form-group row mb-2">
+          <label for="name" class="col-md-3 col-form-label">Enter Name *</label>
+          <div class="col-md-8">
+            <input type="text" class="form-control" formControlName="name" [ngClass]="{
+                'is-invalid': (userForm.get('name').touched || userForm.get('name').dirty) &&
+                  !userForm.get('name').valid
+              }" />
+  
+            <span class="invalid-feedback">
+              <span *ngIf="userForm.get('name').errors?.required">
+                Please enter username
+              </span>
+              <span *ngIf="userForm.get('name').errors?.minlength">
+                name must be longer than 3 characters
+              </span>
+            </span>
+          </div>
+        </div>
+  
+        <div class="form-group row mb-2">
+          <label for="gender" class="col-md-3 col-form-label pt-0">Gender</label>
+          <div class="col-md-8">
+            <div class="form-check form-check-inline">
+              <label class="form-check-label">
+                <input type="radio" class="form-check-input" value="male" formControlName="gender"/>
+                Male
+              </label>
+            </div>
+  
+            <div class="form-check form-check-inline">
+              <label class="form-check-label">
+                <input type="radio" class="form-check-input" value="female" formControlName="gender"/>
+                Female
+              </label>
+            </div>
+          </div>
+        </div>
+  
+        <div formGroupName="emailGroup">
+          <div class="form-group row mb-2">
+            <label for="email" class="col-md-3 col-form-label">Enter Email *</label
+            >
+            <div class="col-md-8">
+              <input type="email" class="form-control" formControlName="email" [ngClass]="{
+                  'is-invalid':
+                    userForm.get('emailGroup').errors ||
+                    ((userForm.get('emailGroup.email').touched ||
+                      userForm.get('emailGroup.email').dirty) &&
+                      !userForm.get('emailGroup.email').valid)
+                }" />
+  
+              <span class="invalid-feedback">
+                <span *ngIf="userForm.get('emailGroup.email').errors?.required">
+                  Please enter email address
+                </span>
+                <span *ngIf="userForm.get('emailGroup.email').errors?.email">
+                  Please enter a valid email address
+                </span>
+              </span>
+            </div>
+          </div>
+  
+          <div class="form-group row mb-2">
+            <label for="confirmEmail" class="col-md-3 col-form-label">Confirm Email *</label>
+            <div class="col-md-8">
+              <input type="email" class="form-control" formControlName="confirmEmail" [ngClass]="{
+                  'is-invalid':
+                    userForm.get('emailGroup').errors ||
+                    ((userForm.get('emailGroup.confirmEmail').touched ||
+                      userForm.get('emailGroup.confirmEmail').dirty) &&
+                      !userForm.get('emailGroup.confirmEmail').valid)
+                }" />
+  
+              <span class="invalid-feedback">
+                <span
+                  *ngIf="userForm.get('emailGroup.confirmEmail').errors?.required">
+                  Please confirm your email address.
+                </span>
+                <span *ngIf="userForm.get('emailGroup').errors?.match">
+                  The confirmation does not macth the email address.
+                </span>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group row mb-2">
+          <label for="company" class="col-md-3 col-form-label">Company Name</label>
+          <div class="col-md-8">
+            <input type="text" class="form-control" formControlName="company" />
+          </div>
+        </div>
+  
+        <div class="form-group row mb-2">
+          <label for="age" class="col-md-3 col-form-label">Enter Age</label>
+          <div class="col-md-8">
+            <input type="text" class="form-control" formControlName="age" />
+          </div>
+        </div>
+  
+        <div class="form-group row mb-2">
+          <div class="offset-md-2 col-md-8">
+            <button class="btn btn-primary mr-3" type="submit" [disabled]="!userForm.valid">
+              Update
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  
